@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rat and cat</title>
+</head>
+<body>
+<script>
+    function Mouse(name,weight,speed,status) {
+        this.name = name;
+        this.weight = weight;
+        this.speed = speed;
+        this.status = status;
+        this.getStatus = function () {
+            return this.status;
+        }
+        this.setStatus = function (newStatus) {
+            this.status = newStatus;
+        }
+        this.sound = function (stringMouse) {
+            if(this.status) {
+                console.log(stringMouse);
+            }
+        }
+    }
+    let long=new Mouse('long',69,5,true);
+    let linda= new Mouse('linda',23,4,false);
+    let dong = new Mouse('dong',45,6,true);
+    function Cat(name,weight,speed) {
+        this.name = name;
+        this.weight = weight;
+        this.speed = speed;
+        this.soung = function (stringCat) {
+            console.log(stringCat);
+        }
+        this.catch = function (mouse) {
+            if (this.speed > mouse.speed) {
+                console.log('Meo' + this.name + ' da bat duoc chuot ' + mouse.name);
+            }
+            else {
+                console.log('Meo' + this.name + ' khong bat duoc chuot ' + mouse.name);
+            }
+        }
+        this.eat + function (mouse) {
+            if (mouse.getStatus()) {
+                this.weight += mouse.weight;
+                mouse.setstatus(false);
+            } else {
+                console.log('con chuot nay da bi an');
+            }
+        }
+    }
+    let minh = new Cat('minh,60,70');
+</script>
+</body>
+</html>
